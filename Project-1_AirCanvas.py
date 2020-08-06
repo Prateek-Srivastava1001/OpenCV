@@ -49,7 +49,7 @@ def findcolour(img, colorIndex):
 
     if x != 0 and y != 0:
         newpoints.append([x, y])
-        return newpoints, colorIndex
+    return newpoints, colorIndex
 
 
 def getcontours(img1):
@@ -101,7 +101,7 @@ while True:
                 myPointsG.append(p)
             if colorIndex == 2:
                 myPointsR.append(p)
-            drawOnCanvas(myPointsB, myPointsG, myPointsR)
+    drawOnCanvas(myPointsB, myPointsG, myPointsR)
 
     # UI
     cv2.rectangle(img, (5, 5), (155, 101), (0, 0, 0), cv2.FILLED)  # CLEAR ALL
