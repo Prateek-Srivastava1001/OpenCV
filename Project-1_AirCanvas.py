@@ -91,6 +91,7 @@ def drawOnCanvas(myPointsB, myPointsG, mypointsR):
 #LOOP
 while True:
     success, img = cap.read()
+    img = cv2.flip(img, 1)
     newPoints = []
     newPoints, colorIndex = findcolour(img, colorIndex)
     if newPoints:
