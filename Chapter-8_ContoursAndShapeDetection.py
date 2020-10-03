@@ -1,14 +1,18 @@
+#Importing Packages
 import cv2
 import numpy as np
+#Initializing webcam for video feed
 cap = cv2.VideoCapture(0)
 cap.set(3, 640)
 cap.set(4, 480)
 cap.set(10, 100)
 
+#Getting contours from the given image
 def getContours(img1, imgreal):
     contours, hiearchy = cv2.findContours(img1, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
     for cnt in contours:
         area = cv2.contourArea(cnt)
+        #REDUCING NOISE
         if area>10:
             cv2.drawContours(imgreal, cnt, -1, (0, 0, 255), 3)
             peri = cv2.arcLength(cnt, True) # GIVES PERIMETER OF EACH CONTOUR
