@@ -1,6 +1,10 @@
+#importing packages
 import cv2
 import numpy as np
+
+#Initializing webcam for video input
 cap = cv2.VideoCapture(0)
+#initial settings
 cap.set(3, 640)
 cap.set(4, 480)
 cap.set(10, 100)
