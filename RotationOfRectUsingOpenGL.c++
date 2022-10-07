@@ -108,3 +108,19 @@ void rotateRectangle (void) {
 
 
 }
+
+
+
+int main(int argc, char** argv)
+{
+    glutInit(&argc, argv);
+    glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
+    glutInitWindowSize(maxWD, maxHT);
+    glutInitWindowPosition(100, 150);
+    glutCreateWindow("Rotation");
+    glutDisplayFunc(rotateRectangle);
+    myInit();
+    glutMainLoop();
+
+    return 0;
+}
