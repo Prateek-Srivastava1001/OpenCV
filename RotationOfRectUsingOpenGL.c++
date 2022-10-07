@@ -53,3 +53,58 @@ void drawPoint()
     glFlush();
 
 }
+
+
+void rotateRectangle (void) {
+    drawPoint();
+    Sleep(1000);
+    double rotMat[3][3] = {{0.866, -0.5, 0}, {0.5, 0.866, 0}, {0, 0, 1}};
+
+
+
+    // vertex 1
+    int res[3][1];
+
+
+    res[0][0] = vertice1[0][0];
+    res[1][0] = vertice1[1][0];
+    res[2][0] = vertice1[2][0];
+    vertice1[0][0] = rotMat[0][0]*res[0][0]+rotMat[0][1]*res[1][0]+rotMat[0][2]*res[2][0];
+    vertice1[1][0] = rotMat[1][0]*res[0][0]+rotMat[1][1]*res[1][0]+rotMat[1][2]*res[2][0];
+    vertice1[2][0] = rotMat[2][0]*res[0][0]+rotMat[2][1]*res[1][0]+rotMat[2][2]*res[2][0];
+
+
+
+    // vertex 2
+
+    res[0][0] = vertice2[0][0];
+    res[1][0] = vertice2[1][0];
+    res[2][0] = vertice2[2][0];
+    vertice2[0][0] = rotMat[0][0]*res[0][0]+rotMat[0][1]*res[1][0]+rotMat[0][2]*res[2][0];
+    vertice2[1][0] = rotMat[1][0]*res[0][0]+rotMat[1][1]*res[1][0]+rotMat[1][2]*res[2][0];
+    vertice2[2][0] = rotMat[2][0]*res[0][0]+rotMat[2][1]*res[1][0]+rotMat[2][2]*res[2][0];
+
+
+    // vertex 3
+
+    res[0][0] = vertice3[0][0];
+    res[1][0] = vertice3[1][0];
+    res[2][0] = vertice3[2][0];
+    vertice3[0][0] = rotMat[0][0]*res[0][0]+rotMat[0][1]*res[1][0]+rotMat[0][2]*res[2][0];
+    vertice3[1][0] = rotMat[1][0]*res[0][0]+rotMat[1][1]*res[1][0]+rotMat[1][2]*res[2][0];
+    vertice3[2][0] = rotMat[2][0]*res[0][0]+rotMat[2][1]*res[1][0]+rotMat[2][2]*res[2][0];
+
+
+    // vertex 4
+
+    res[0][0] = vertice4[0][0];
+    res[1][0] = vertice4[1][0];
+    res[2][0] = vertice4[2][0];
+    vertice4[0][0] = rotMat[0][0]*res[0][0]+rotMat[0][1]*res[1][0]+rotMat[0][2]*res[2][0];
+    vertice4[1][0] = rotMat[1][0]*res[0][0]+rotMat[1][1]*res[1][0]+rotMat[1][2]*res[2][0];
+    vertice4[2][0] = rotMat[2][0]*res[0][0]+rotMat[2][1]*res[1][0]+rotMat[2][2]*res[2][0];
+
+    drawPoint();
+
+
+}
